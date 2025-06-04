@@ -569,9 +569,9 @@
                                 <label for="remember-me"
                                     class="toggle-label block overflow-hidden h-5 rounded-full bg-gray-300 cursor-pointer"></label>
                             </div>
-                            <label for="remember-me" class="text-sm text-gray-700">Remember me</label>
+                            <label for="remember-me" class="text-sm text-gray-700 hover">Remember me</label>
                         </div>
-                        <a href="#" class="text-sm text-primary hover:underline">Forgot password?</a>
+                        <a href="#" class="text-sm text-primary">Forgot password?</a>
                     </div>
                     <button
                         class="w-full bg-primary text-white py-2 !rounded-button whitespace-nowrap hover:bg-primary/90 mb-4">Log
@@ -700,7 +700,7 @@
                                 <i class="ri-instagram-fill"></i>
                             </div>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
+                        <a href="https://www.linkedin.com/in/jai-shankar-b78511369" class="text-gray-400 hover:text-white">
                             <div class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full">
                                 <i class="ri-linkedin-fill"></i>
                             </div>
@@ -763,7 +763,7 @@
             </div>
         </div>
     </footer>
-    <script id="mobile-menu-script">
+    <script id="mobile-menu-button">
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -772,7 +772,16 @@
             });
         });
     </script>
-    <script id="auth-modal-script">
+    <script>
+         window.onload = function () {
+            document.getElementById("auth-modal").classList.remove("hidden");
+        };
+
+        function closeForm() {
+             document.getElementById("auth-modal").classList.add("hidden");
+        }
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             const loginButtons = document.querySelectorAll('button:nth-child(1)');
             const signupButtons = document.querySelectorAll('button:nth-child(2)');
